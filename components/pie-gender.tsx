@@ -72,7 +72,11 @@ const renderActiveShape = (props: any) => {
   );
 };
 
-export function PieGender() {
+interface PieGenderProps {
+  color?: string; // Add color as a prop
+}
+
+export const PieGender: React.FC<PieGenderProps> = ({ color }) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   const onPieEnter = (_: any, index: number) => {

@@ -47,7 +47,7 @@ export default function ProgramPage() {
   const [monthAggregate, setMonthAggregate] = useState<MonthAggregate[]>([]);
   const [organization, setOrganization] = useState<string | null>(null);
 
-  const [color, setColor] = useState<string>("");
+  // const [color, setColor] = useState<string>("");
 
   const supabase = createClient();
   useEffect(() => {

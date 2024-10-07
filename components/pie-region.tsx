@@ -81,7 +81,11 @@ const renderActiveShape = (props: any) => {
   );
 };
 
-export function PieRegion() {
+interface PieRegionProps {
+  color?: string; // Add color as a prop
+}
+
+export const PieRegion: React.FC<PieRegionProps> = ({ color }) => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
 
   const onPieEnter = (_: any, index: number) => {
